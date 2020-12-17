@@ -4,7 +4,6 @@ var Username = '';
 var pass = '';
 var numOfStars = 0;
 
-areYouRobot();
 
 function myFunction1(Event) {
     document.getElementById("login").style.display = "none";
@@ -77,16 +76,8 @@ function myFunction1(Event) {
         document.getElementById("user-account").style.display = "block";
         document.getElementById("new-user-name").innerHTML = username;
     }
-}
 
-function areYouRobot(){
-  let strArr = 'ABCDEFGHIGKLMNOPQRSTUVWXYZabcdefjhigklmnopqrstuvwxyz';
-  var word = Math.round(Math.random() * 10) + strArr[Math.floor(Math.random() * strArr.length)] + Math.round(Math.random() * 10) +  strArr[Math.floor(Math.random() * strArr.length)]  + Math.round(Math.random() * 10) + strArr[Math.floor(Math.random() * strArr.length)] ;
-  var person = prompt("Welcome To Our Website, To make sure that you are not a robot Enter the word => " + word);
-  while(person !=  word){
-    let prevWord = word;
-    word = Math.round(Math.random() * 10) + strArr[Math.floor(Math.random() * strArr.length)] + Math.round(Math.random() * 10) +  strArr[Math.floor(Math.random() * strArr.length)]  + Math.round(Math.random() * 10) + strArr[Math.floor(Math.random() * strArr.length)] ;
-    person = prompt(person + ' is not equal to ' + prevWord + ".  To make sure that you are not a robot Enter the word => " + word);
+
   }
   numOfStars = prompt("How many Stars are you giving to our website, Choose for 1 to 5");
   while (numOfStars == '' || isNaN(numOfStars) || numOfStars > 5) {
